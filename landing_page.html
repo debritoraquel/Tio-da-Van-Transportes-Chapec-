@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tio da Van Transportes Escolares</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-dBwexvI0y5ZH9IzKiu+ADi4Oq9R/P9X4p2A28GPYSd1JdgCZmz1m9F50DqZObG4aE9Z6pVNv6sWs1MFiZrY/Zg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, #fafafa 0%, #f0f4f7 100%);
+            padding: 3rem 1rem 4rem;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .hero-text {
+            flex: 1 1 50%;
+        }
+
+        .hero-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.8rem;
+            color: #e53935;
+            margin: 0 0 0.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 0 0 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            background-color: #0088cc;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #006da0;
+        }
+
+        .hero-logo {
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+        .hero-logo img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Services Section */
+        #services {
+            background: #f9fafc;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #0088cc;
+            margin-bottom: 0.5rem;
+        }
+
+        #services p.section-intro {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            max-width: 330px;
+            flex: 1 1 calc(33% - 2rem);
+            min-width: 260px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .service-item i {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: #e53935;
+        }
+
+        .service-item h3 {
+            font-size: 1.2rem;
+            color: #0088cc;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-item p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Advantages Section */
+        #advantages {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        #advantages h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #e53935;
+            margin-bottom: 0.5rem;
+        }
+
+        #advantages p.section-intro {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .adv-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .adv-item {
+            background: #f4f9f4;
+            border-radius: 12px;
+            padding: 1.5rem;
+            max-width: 330px;
+            flex: 1 1 calc(33% - 2rem);
+            min-width: 260px;
+            transition: transform 0.2s ease;
+        }
+
+        .adv-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .adv-item i {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: #43a047;
+        }
+
+        .adv-item h3 {
+            font-size: 1.2rem;
+            color: #0088cc;
+            margin-bottom: 0.5rem;
+        }
+
+        .adv-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #0088cc;
+            color: #ffffff;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #contact p.section-intro {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        .contact-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            flex: 1 1 300px;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 0.75rem 0;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #e53935;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transporte escolar com confiança e carinho</h1>
+                <p>O Tio da Van oferece um serviço seguro, confortável e pontual para levar crianças e jovens às escolas e atividades. Confie em quem cuida do futuro todos os dias.</p>
+                <a href="#contact" class="cta-button">Solicite uma cotação</a>
+            </div>
+            <div class="hero-logo">
+                <!-- Preserve original company logo -->
+                <img src="logo tio da van.jpg" alt="Logotipo Tio da Van Transportes">
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <p class="section-intro">Atendemos às necessidades de transporte escolar e eventuais excursões com segurança e profissionalismo.</p>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-school"></i>
+                <h3>Transporte Escolar Regular</h3>
+                <p>Serviço diário de ida e volta para escolas e creches em Chapecó e região, com veículos vistoriados e motoristas capacitados.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-bus"></i>
+                <h3>Excursões e Passeios</h3>
+                <p>Transporte para atividades extracurriculares, passeios escolares e viagens pedagógicas com conforto e pontualidade.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>Eventos Especiais</h3>
+                <p>Disponibilizamos vans para festas, aniversários e outras ocasiões especiais, garantindo segurança e tranquilidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages">
+        <h2>Por que escolher o Tio da Van?</h2>
+        <p class="section-intro">Comprometimento e atenção aos detalhes fazem toda a diferença no transporte de crianças.</p>
+        <div class="adv-grid">
+            <div class="adv-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Segurança em Primeiro Lugar</h3>
+                <p>Veículos revisados, equipamentos de segurança atualizados e motoristas certificados garantem um transporte confiável.</p>
+            </div>
+            <div class="adv-item">
+                <i class="fas fa-clock"></i>
+                <h3>Pontualidade e Organização</h3>
+                <p>Horários planejados e rotas otimizadas asseguram que as crianças cheguem no tempo certo às atividades.</p>
+            </div>
+            <div class="adv-item">
+                <i class="fas fa-heart"></i>
+                <h3>Atendimento Humanizado</h3>
+                <p>Tratamos cada passageiro com carinho e respeito, proporcionando um ambiente acolhedor durante o trajeto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Entre em Contato</h2>
+        <p class="section-intro">Estamos prontos para atendê-lo. Faça sua reserva ou solicite mais informações.</p>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p><strong>Telefone / WhatsApp:</strong> <a href="tel:+5549999434962">(49) 99943‑4962</a></p>
+                <p><strong>Email:</strong> <a href="mailto:tiodavantransportes@gmail.com">tiodavantransportes@gmail.com</a></p>
+            </div>
+            <div class="contact-info">
+                <p><strong>Redes Sociais:</strong></p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/tiodavan.transporteescolar/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/tiodavanchapeco" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Tio da Van Transportes. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
